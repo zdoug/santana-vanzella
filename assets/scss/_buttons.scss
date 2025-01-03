@@ -1,0 +1,23 @@
+.btn {
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-family: $primary-font;
+    text-decoration: none;
+    margin-top: 2.8rem;
+    border-radius: 8px;
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    background: $gray1;
+    &__primary {
+        background: $orange;
+        color: $white;
+    }
+    
+}
+
+.link {
+    font-size: 1.6rem;
+    &--positive {
+        color: $orange;
+    }
+}
