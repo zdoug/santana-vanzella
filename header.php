@@ -23,6 +23,6 @@
                     'container' => 'nav'
                 ));
             ?>
+            <a href="" class="btn btn__primary">WhatsApp</a>
         </div>
-        <a href="" class="btn btn__primary">WhatsApp</a>
     </header>

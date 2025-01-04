@@ -2,7 +2,7 @@
 
     function ambigram_scripts() {
         wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.min.js', null, '1.0', true);
-        wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=PT+Serif:ital@0;1&display=swap', null, array(), 'all');
+        wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=PT+Serif:ital@0;1&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap', null, array(), 'all');
         wp_enqueue_style('styles', get_template_directory_uri() . '/css/stylesheet.css', null, '1.0', 'all');
     }
 

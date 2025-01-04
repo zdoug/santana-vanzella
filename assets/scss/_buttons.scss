@@ -1,23 +1,19 @@
 .btn {
     font-size: 1.6rem;
-    font-weight: 700;
-    font-family: $primary-font;
+    font-weight: 500;
+    font-family: $secondary-font;
     text-decoration: none;
-    margin-top: 2.8rem;
     border-radius: 8px;
     display: inline-block;
     padding: 1.5rem 3rem;
     background: $gray1;
     &__primary {
-        background: $orange;
+        background: $primary-color;
         color: $white;
     }
-    
-}
-
-.link {
-    font-size: 1.6rem;
-    &--positive {
-        color: $orange;
+    &__secondary {
+        background: $gray2;
+        color: $primary-color;
     }
+    
 }

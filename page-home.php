@@ -12,10 +12,11 @@
                 <a href="<?php echo home_url(); ?>/areas-atuacao/" class="btn btn__secondary">Áreas de Atuação</a>
             </div>
         </div>
-        <div class="col-5">
+        <div class="col-5 seal-container">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/homem-paleto-escrevendo.png" alt="" class="img-fluid">
             <div id="seal">
                 <span class="years">2005-2025</span>
-                <svg></svg>
+                <img src="<?php echo get_template_directory_uri(); ?>/img/icone-balanca.svg" alt="Ícone de Balança">
                 <p><strong>20</strong> anos de experiência</p>
             </div>
         </div>
@@ -33,8 +34,10 @@
 
 <section class="home-areas">
     <div class="container">
-        <h2>Conheça nossas Áreas de Atuação</h2>
-        <p>Nossa equipe é composta de especialistas em Direito Civil, Direito Médico e Direito Trabalhista. Mas acima de tudo, somos especialistas em ouvir a sua necessidade, para trazer a melhor solução para ela:</p>
+        <div class="col-6">
+            <h2>Conheça nossas<br />Áreas de Atuação</h2>
+            <p>Nossa equipe é composta de especialistas em Direito Civil, Direito Médico e Direito Trabalhista. Mas acima de tudo, somos especialistas em ouvir a sua necessidade, para trazer a melhor solução para ela:</p>
+        </div>
     </div>
     <div class="container">
         <?php
