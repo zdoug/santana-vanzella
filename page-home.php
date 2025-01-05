@@ -5,7 +5,7 @@
 <main class="main">
     <div class="container">
         <div class="col-7">
-            <h1>Somos advogados especialistas em <a href="">Direito Médico</a>, <a href="">Civil</a> e <a href="">Trabalhista</a>.</h1>
+            <h1>Somos advogados especialistas em <a href="<?php echo home_url(); ?>/areas-atuacao/direito-civil/">Direito Civil</a>, <a href="<?php echo home_url(); ?>/areas-atuacao/direito-medico/">Médico</a> e <a href="<?php echo home_url(); ?>/areas-atuacao/direito-trabalhista/">Trabalhista</a>.</h1>
             <p>O escritório <strong>Santana & Vanzella Advogados</strong> possui atendimento personalizado e com pleno foco nas suas necessidades.</p>
             <div class="main__buttons">
                 <a href="<?php echo home_url(); ?>/o-escritorio/" class="btn btn__primary">O Escritório</a>
@@ -34,7 +34,7 @@
 
 <section class="home-areas">
     <div class="container">
-        <div class="col-6">
+        <div class="col-7">
             <h2>Conheça nossas<br />Áreas de Atuação</h2>
             <p>Nossa equipe é composta de especialistas em Direito Civil, Direito Médico e Direito Trabalhista. Mas acima de tudo, somos especialistas em ouvir a sua necessidade, para trazer a melhor solução para ela:</p>
         </div>
@@ -56,9 +56,9 @@
                     $postlist2->the_post();
         ?>
             <div class="col-4 home-areas__area">
-                <a href="<?php the_permalink(); ?>">
+                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
                     <div class="icon-area">
-                    <?php the_post_thumbnail( 'medium' ); ?>
+                    <?php the_post_thumbnail( 'custom-thumb' ); ?>
                     </div>
                     <h3><?php the_title(); ?></h3>
                 </a>
@@ -75,18 +75,20 @@
     </div>
 </section>
 
-<section class="call-to-action">
+<section>
     <div class="container">
-        <div class="col-7">
-            <h2>Nós temos o <em>caminho certo</em> para a sua necessidade.</h2>
-            <p>Agende uma consultoria gratuita através de nosso WhatsApp ou pelo telefone com nossa equipe:</p>
-            <div class="main__buttons">
-                <a href="<?php echo home_url(); ?>/sobre-nos/" class="btn btn__primary">WhatsApp</a>
-                <a href="tel:+554333415663" class="btn btn__secondary">Falar por telefone</a>
+        <div class="call-to-action">
+            <div class="col-7">
+                <h2>Nós temos o <em>caminho certo</em> para a sua necessidade.</h2>
+                <p>Agende uma consultoria gratuita através de nosso WhatsApp ou pelo telefone com nossa equipe:</p>
+                <div class="main__buttons">
+                    <a href="<?php echo home_url(); ?>/sobre-nos/" class="btn btn__primary">WhatsApp</a>
+                    <a href="tel:+554333415663" class="btn btn__secondary">Falar por telefone</a>
+                </div>
             </div>
-        </div>
-        <div class="col-5">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/homem-negocios-bracos-cruzados-sorrindo" alt="Homem de negócios sorrindo de braços cruzados" class="img-fluid">
+            <div class="col-5">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/homem-negocios-bracos-cruzados-sorrindo.png" alt="Homem de negócios sorrindo de braços cruzados" class="img-fluid">
+            </div>
         </div>
     </div>
 </section>

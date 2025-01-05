@@ -5,7 +5,7 @@
             </div>
             <div class="col-4">
                 <div class="footer__links">
-                    <h2>Links</h2>
+                    <h3>Links</h3>
                     <?php
                         wp_nav_menu(array(
                             'theme_location' => 'footer_menu',
@@ -14,25 +14,25 @@
                     ?>
                 </div>
                 <div class="footer__links">
-                    <h2>Endereço</h2>
+                    <h3>Endereço</h3>
                     <address>Avenida Ayrton Senna da Silva, 500 Condomínio Torre di Pietra, 15º andar
                     Londrina/PR</address>
                 </div>
             </div>
             <div class="col-4">
                 <div class="footer__links">
-                    <h2>E-mail</h2>
+                    <h3>E-mail</h3>
                     <a href="mailto:escritorio@santanaevanzella.com.br" target="_blank" rel="external">escritorio@santanaevanzella.com.br</a>
                 </div>
                 <div class="footer__links">
-                    <h2>WhatsApp / Telefone</h2>
+                    <h3>WhatsApp / Telefone</h3>
                     <ul>
                         <li><a href="">(43) 99835-3386</a></li>
                         <li><a href="">(43) 3341-5663</a></li>
                     </ul>
                 </div>
                 <div class="footer__links">
-                    <h2>Redes Sociais</h2>
+                    <h3>Redes Sociais</h3>
                     <ul>
                         <li><a href="">Instagram</a></li>
                         <li><a href="">LinkedIn</a></li>
@@ -41,13 +41,11 @@
             </div>
         </div>
         <div class="container copyright">
-            <div class="col-6">
-                <p>2025® - Santana & Vanzella Advogados - Todos os Direitos Reservados.</p>
-            </div>
-            <div class="col-6">
-                <a href="https://ambigram.studio" target="_blank" rel="external" title="Desenvolvido por Ambigram Design Studio">
+            <div class="col-12">
+                <p><?php echo date('Y'); ?> ® - Santana & Vanzella Advogados - Todos os Direitos Reservados.</p>
+                <p>Site desenvolvido por Ambigram Design Studio <a href="https://ambigram.studio" target="_blank" rel="external" title="Desenvolvido por Ambigram Design Studio">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/icon-ambigram.svg" alt="Ícone Ambigram">
-                </a>
+                </a></p>
             </div>
         </div>
     </footer>

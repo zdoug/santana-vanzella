@@ -1,3 +1,157 @@
 @media screen and (max-width: 767px) {
-    
+    div[class^="col-"] {
+        flex: 0 0 100%;
+    }
+
+    h2 {
+        font-size: 2.8rem;
+    }
+    body {
+        overflow-x: hidden;
+        &.home {
+            & main {
+                & .container {
+                    flex-direction: column-reverse;
+                    row-gap: 3rem;
+                    & h1 {
+                        font-size: 3rem;
+                        margin-bottom: 2rem;
+                    }
+                    & .seal-container {
+                        & #seal {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            blockquote {
+                padding: 3rem 0;
+                & .container {
+                    padding-left: 6rem;
+                    padding-right: 6rem;
+                    & p {
+                        font-size: 1.8rem;
+                    }
+                    & cite {
+                        font-size: 2rem;
+                    }
+                }
+            }
+            & .home-areas {
+                & .container {
+                    flex-direction: column;
+                    row-gap: 2rem;
+                }
+                &__area {
+                    padding: 3rem;
+                    & a {
+                        & h3 {
+                            font-size: 2rem;
+                            margin-top: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    header {
+        overflow-x: hidden;
+        & .container {
+            & nav, .btn__primary {
+                display: none;
+            }
+            & nav {
+                display: flex;
+                position: absolute;
+                transition: all 0.2s ease-out;
+                top: 0;
+                right: 100%;
+                width: 100%;
+                height: 100vh;
+                z-index: 1;
+                background: $primary-color;
+                color: white;
+                align-items: center;
+                justify-content: center;
+                & ul {
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: 2rem;
+                    & li {
+                        font-size: 2.4rem;
+                        & a {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+            & button {
+                display: flex;
+                flex-direction: column;
+                row-gap: 6px;
+                background: none;
+                border: none;
+                position: relative;
+                z-index: 2;
+                & .line {
+                    width: 30px;
+                    height: 2px;
+                    background: $primary-color;
+                    display: block;
+                }
+                &.active {
+                    + nav {
+                        right: 0;
+                        transition: all 0.2s ease-in;
+                    }
+                    & .line {
+                        background: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        &__links {
+            & + .footer__links {
+                margin-top: 3rem;
+            }
+        }
+        & .container {
+            flex-direction: column;
+            row-gap: 3rem;
+            &.copyright {
+                margin-top: 5rem;
+                & > .col-12 {
+                    flex-direction: column;
+                    row-gap: 2rem;
+                    align-items: flex-start;
+                }
+            }
+        }
+    }
+
+    .main__buttons {
+        flex-direction: column;
+        row-gap: 1.6rem;
+    }
+
+    .call-to-action {
+        margin-top: 0;
+        padding: 6rem 3rem 0;
+        flex-direction: column;
+        row-gap: 4rem;
+        & .col-7 {
+            max-height: fit-content;
+        }
+        & .col-5 {
+            max-height: fit-content;
+            & img {
+                position: static;
+                max-width: 100%;
+            }
+        }
+    }
 }

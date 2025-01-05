@@ -14,6 +14,8 @@
         
         add_theme_support( 'post-thumbnails' );
         add_theme_support( 'custom-header' );
+
+        add_image_size( 'custom-thumb', 55, 44); //Simple widget size
     }
 
     function ambigram_sidebars() {
@@ -25,6 +27,15 @@
             'after_widget' => '</blockquote>',
         ));
     }
+
+    /* Libera arquivos SVG para Upload */
+    function add_file_types_to_uploads($file_types){
+        $new_filetypes = array();
+        $new_filetypes['svg'] = 'image/svg+xml';
+        $file_types = array_merge($file_types, $new_filetypes );
+        return $file_types;
+    }
+    add_filter('upload_mimes', 'add_file_types_to_uploads');
 
     /* Adiciona um novo custom post type */
     function add_cpt() { 

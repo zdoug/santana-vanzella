@@ -16,6 +16,7 @@
             <button>
                 <span class="line"></span>
                 <span class="line"></span>
+                <span class="line"></span>
             </button>
             <?php
                 wp_nav_menu(array(

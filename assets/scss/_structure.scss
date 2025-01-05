@@ -43,13 +43,11 @@ h1 {
 
 h2 {
     font-size: 4rem;
+    line-height: 1.2;
 }
 
 p {
     font-size: 1.8rem;
-    & + p {
-        margin-top: 2rem;
-    }
 }
 
 .col-3 {
@@ -66,6 +64,10 @@ p {
 
 .col-6 {
     flex: 0 0 48%;
+}
+
+.col-7 {
+    flex: 0 0 58.33333333333333%;
 }
 
 .col-12 {
@@ -87,6 +89,11 @@ p {
     padding-right: 2rem;
 }
 
+.main__buttons {
+    display: flex;
+    column-gap: 1.6rem;
+}
+
 header {
     padding: 4rem 0;
     & .container {
@@ -101,9 +108,13 @@ header {
                 display: flex;
                 column-gap: 2rem;
                 & li {
-                    font-size: 1.6rem;
+                    font-size: 1.8rem;
                     & a {
                         color: $primary-color;
+                        text-decoration: none;
+                        &:hover {
+                            text-decoration: underline;
+                        }
                     }
                 }
             }
@@ -113,6 +124,7 @@ header {
 
 body.home {
     main {
+        margin-bottom: 8rem;
         & .container {
             align-items: center;
 
@@ -160,14 +172,10 @@ body.home {
             & p {
                 margin-bottom: 3rem;
             }
-            & .main__buttons {
-                display: flex;
-                column-gap: 1.6rem;
-            }
         }
     }
     blockquote {
-        background: $gray3;
+        background: $gray2;
         padding: 7rem 0;
         text-align: center;
         & .container {
@@ -185,12 +193,20 @@ body.home {
     }
 
     & .home-areas {
+        padding: 8rem 0;
+        & h2 {
+            margin-bottom: 2rem;
+            & + p {
+                margin-bottom: 4rem;
+            }
+        }
         &__area {
-            border: 1px solid $gray2;
+            border: 1px solid $gray3;
             padding: 5rem 3rem;
             & a {
                 text-decoration: none;
                 & h3 {
+                    margin-top: 3rem;
                     font-size: 2.4rem;
                     font-family: $secondary-font;
                     color: $primary-color;
@@ -198,5 +214,90 @@ body.home {
             }
         }
     }
+}
 
+.footer {
+    padding: 8rem 0 3rem;
+    background: $primary-color;
+    color: $white;
+    &__links {
+        & + .footer__links {
+            margin-top: 4rem;
+        }
+    }
+    & h3 {
+        color: $secondary-color;
+        font-size: 2rem;
+        margin-bottom: 1.6rem;
+        & + a, + address {
+            color: $white;
+            font-size: 1.6rem;
+        }
+        & + address {
+            font-style: normal;
+            line-height: 1.5;
+        }
+        & + a {
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    & ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        row-gap: 6px;
+        & li {
+            color: $white;
+            font-size: 1.6rem;
+            & a {
+                color: $white;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    & .copyright {
+        margin-top: 12rem;
+        & > .col-12 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            & p {
+                color: $blue;
+                font-size: 1.4rem;
+                & a {
+                    margin-left: 2.4rem;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
+
+.call-to-action {
+    background: $terciary-color;
+    display: flex;
+    column-gap: 4%;
+    padding: 5rem;
+    margin: 8rem 0;
+    position: relative;
+    width: 100%;
+    & .col-7 {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+    }
+    & .col-5 {
+        & img {
+            position: absolute;
+            bottom: 0;
+            right: 5rem;
+            max-width: 380px;
+        }
+    }
 }
