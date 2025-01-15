@@ -1,5 +1,10 @@
 <?php
+    // remove the unwanted <meta> links
+    remove_action('wp_head', 'wp_generator');
 
+    // Remove WooCommerce <meta> links
+    // remove_action('wp_head', 'woo_version'); 
+    
     function ambigram_scripts() {
         wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.min.js', null, '1.0', true);
         wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=PT+Serif:ital@0;1&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap', null, array(), 'all');
@@ -82,5 +87,110 @@
     add_action('wp_enqueue_scripts', 'ambigram_scripts');
     
     add_action( 'after_setup_theme', 'ambigram_config', 0 );
+
+    function get_field($key, $page_id = 0) {
+        $id = $page_id !== 0 ? $page_id : get_the_ID();
+        return get_post_meta($id, $key, true);
+    }
+    
+    function the_field($key, $page_id = 0) {
+        echo get_field($key, $page_id);
+    }
+
+    add_action('cmb2_admin_init', 'cmb2_fields_beneficios');
+    add_action('cmb2_admin_init', 'cmb2_fields_especialidades');
+
+    function cmb2_fields_beneficios() {
+        // Adiciona um bloco
+        $cmb = new_cmb2_box( array(
+            'id'            => 'test_metabox',
+            'title'         => __( '✅ Benefícios', 'cmb2' ),
+            'object_types'  => array( 'areas-atuacao', ), // Post type
+            'context'       => 'normal',
+            'priority'      => 'high',
+            'show_names'    => true, // Show field names on the left
+            // 'cmb_styles' => false, // false to disable the CMB stylesheet
+            // 'closed'     => true, // Keep the metabox closed by default
+        ) );    
+      
+        // Adiciona um campo ao bloco criado
+        $cmb->add_field( array(
+            'name'       => __( 'Benefício 1', 'cmb2' ),
+            'desc'       => __( 'Texto do Campo', 'cmb2' ),
+            'id'         => 'beneficio1',
+            'type'       => 'textarea_small',
+            'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+            // 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
+            // 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
+            // 'on_front'        => false, // Optionally designate a field to wp-admin only
+            // 'repeatable'      => true,
+        ) );
+        $cmb->add_field( array(
+            'name'       => __( 'Benefício 2', 'cmb2' ),
+            'desc'       => __( 'Texto do Campo', 'cmb2' ),
+            'id'         => 'beneficio2',
+            'type'       => 'textarea_small',
+            'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+            // 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
+            // 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
+            // 'on_front'        => false, // Optionally designate a field to wp-admin only
+            // 'repeatable'      => true,
+        ) );
+        $cmb->add_field( array(
+            'name'       => __( 'Benefício 3', 'cmb2' ),
+            'desc'       => __( 'Texto do Campo', 'cmb2' ),
+            'id'         => 'beneficio3',
+            'type'       => 'textarea_small',
+            'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+            // 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
+            // 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
+            // 'on_front'        => false, // Optionally designate a field to wp-admin only
+            // 'repeatable'      => true,
+        ) );
+    }
+
+    function cmb2_fields_especialidades() {
+        // Adiciona um bloco
+        $cmb = new_cmb2_box( array(
+            'id'            => 'test_metabox2',
+            'title'         => __( '➕ Especialidades', 'cmb2' ),
+            'object_types'  => array( 'areas-atuacao', ), // Post type
+            'context'       => 'normal',
+            'priority'      => 'low',
+            'show_names'    => true, // Show field names on the left
+            // 'cmb_styles' => false, // false to disable the CMB stylesheet
+            // 'closed'     => true, // Keep the metabox closed by default
+        ) );
+
+        $especialidades = $cmb->add_field([
+            'id'            => 'especialidades',
+            'title'         => __( 'Especialidades', 'cmb2' ),
+            'object_types'  => array( 'areas-atuacao', ), // Post type
+            'context'       => 'normal',
+            'priority'      => 'high',
+            'show_names'    => true,
+            'type' => 'group',
+            'repeatable' => 'true',
+            'options' => [
+                'group_title' => 'Especialidade {#}',
+                'add_button' => 'Adicionar especialidade',
+                'remove_button' => 'Remover especialidade',
+                'sortable' => true
+            ]
+        ]);
+
+        $cmb->add_group_field($especialidades, [
+            'name' => 'Especialidade',
+            'id' => 'especialidade',
+            'type' => 'text',
+        ]);
+
+        $cmb->add_group_field($especialidades, [
+            'name' => 'Descrição da Especialidade',
+            'id' => 'descricao_especialidade',
+            'type' => 'textarea_small',
+        ]);
+    
+    }
 
 ?>
