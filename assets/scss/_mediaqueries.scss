@@ -154,4 +154,25 @@
             }
         }
     }
+
+    article#post {
+        & .container {
+            & .metabox {
+                column-gap: 2rem;
+                &__date {
+                    font-size: 1.6rem;
+                }
+            }
+            & .content-post {
+                h1 {
+                    font-size: 3.2rem;
+                }
+                & img {
+                    &.wp-post-image {
+                        margin-bottom: 3rem;
+                    }
+                }
+            }
+        }
+    }
 }

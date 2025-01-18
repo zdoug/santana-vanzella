@@ -70,6 +70,10 @@ p {
     flex: 0 0 58.33333333333333%;
 }
 
+.col-8 {
+    flex: 0 0 66.66666666666667%;
+}
+
 .col-12 {
     flex: 0 0 100%;
 }
@@ -306,5 +310,81 @@ body.home {
 .fotos {
     &__slider {
         overflow-x: scroll;
+    }
+}
+article#post {
+    & .container {
+        justify-content: center;
+        & .content-post {
+            margin-bottom: 6rem;
+            & img {
+                margin-bottom: 2.5rem;
+                &.wp-post-image {
+                    margin-bottom: 5rem;
+                    height: auto;
+                }
+            }
+            & ul {
+                margin: 3rem 0;
+                list-style-position: inside;
+                background: $gray1;
+                padding: 3rem;
+                li {
+                    font-size: 1.8rem;
+                    line-height: 1.5;
+                    & + li {
+                        margin-top: 1.4rem;
+                    }
+                }
+            }
+            & h2 {
+                font-size: 3.2rem;
+                color: $secondary-color;
+                margin-bottom: 2.3rem;
+            }
+            & p {
+                margin-bottom: 2.3rem;
+                & a {
+                    color: $secondary-color;
+                    text-decoration: underline;
+                }
+            }
+        }
+        
+    }
+}
+.breadcrumb {
+    display: flex;
+    list-style: none;
+    column-gap: 1rem;
+    align-items: center;
+    font-size: 1.5rem;
+    &__item {
+        font-size: 1.5rem;
+    }
+}
+
+.metabox {
+    margin: 2.5rem 0;
+    display: flex;
+    column-gap: 3rem;
+    align-items: center;
+    &__date {
+        font-size: 2rem;
+        color: $secondary-color;
+    }
+    & .post-categories {
+        list-style: none;
+        & li {
+            font-size: 1.2rem;
+            color: $white;
+            background: $secondary-color;
+            padding: .5rem .75rem;
+            border-radius: 4px;
+            & a {
+                color: $white;
+                text-decoration: none;
+            }
+        }
     }
 }

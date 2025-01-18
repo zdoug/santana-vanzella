@@ -79,6 +79,10 @@ p {
   flex: 0 0 58.3333333333%;
 }
 
+.col-8 {
+  flex: 0 0 66.6666666667%;
+}
+
 .col-12 {
   flex: 0 0 100%;
 }
@@ -305,6 +309,81 @@ body.home .home-areas__area a h3 {
   overflow-x: scroll;
 }
 
+article#post .container {
+  justify-content: center;
+}
+article#post .container .content-post {
+  margin-bottom: 6rem;
+}
+article#post .container .content-post img {
+  margin-bottom: 2.5rem;
+}
+article#post .container .content-post img.wp-post-image {
+  margin-bottom: 5rem;
+  height: auto;
+}
+article#post .container .content-post ul {
+  margin: 3rem 0;
+  list-style-position: inside;
+  background: #F5F5F5;
+  padding: 3rem;
+}
+article#post .container .content-post ul li {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+article#post .container .content-post ul li + li {
+  margin-top: 1.4rem;
+}
+article#post .container .content-post h2 {
+  font-size: 3.2rem;
+  color: #B49564;
+  margin-bottom: 2.3rem;
+}
+article#post .container .content-post p {
+  margin-bottom: 2.3rem;
+}
+article#post .container .content-post p a {
+  color: #B49564;
+  text-decoration: underline;
+}
+
+.breadcrumb {
+  display: flex;
+  list-style: none;
+  column-gap: 1rem;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.breadcrumb__item {
+  font-size: 1.5rem;
+}
+
+.metabox {
+  margin: 2.5rem 0;
+  display: flex;
+  column-gap: 3rem;
+  align-items: center;
+}
+.metabox__date {
+  font-size: 2rem;
+  color: #B49564;
+}
+.metabox .post-categories {
+  list-style: none;
+}
+.metabox .post-categories li {
+  font-size: 1.2rem;
+  color: white;
+  background: #B49564;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+}
+.metabox .post-categories li a {
+  color: white;
+  text-decoration: none;
+}
+
 .btn {
   font-size: 1.6rem;
   font-weight: 500;
@@ -457,5 +536,17 @@ body.home .home-areas__area a h3 {
   .call-to-action .col-5 img {
     position: static;
     max-width: 100%;
+  }
+  article#post .container .metabox {
+    column-gap: 2rem;
+  }
+  article#post .container .metabox__date {
+    font-size: 1.6rem;
+  }
+  article#post .container .content-post h1 {
+    font-size: 3.2rem;
+  }
+  article#post .container .content-post img.wp-post-image {
+    margin-bottom: 3rem;
   }
 }
