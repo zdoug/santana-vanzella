@@ -57,4 +57,6 @@
         endwhile;
     ?>
 
+    <?php get_template_part('content', 'call-to-action'); ?>
+
 <?php get_footer(); ?>

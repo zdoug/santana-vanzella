@@ -18,10 +18,10 @@ html {
 }
 
 body {
-  background: #F5F5F5;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: #202938;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -299,6 +299,10 @@ body.home .home-areas__area a h3 {
   bottom: 0;
   right: 5rem;
   max-width: 380px;
+}
+
+.fotos__slider {
+  overflow-x: scroll;
 }
 
 .btn {

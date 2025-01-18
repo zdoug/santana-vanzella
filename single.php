@@ -16,7 +16,7 @@
         <div class="container">
             <div class="col-8">
                 <h1><?php the_title(); ?></h1>
-                <?php the_post_thumbnail( array( 456, 609 ) ); ?>
+                <?php the_post_thumbnail( 'full' ); ?>
                 <?php the_content(); ?></p>
             </div>
             <?php
@@ -24,5 +24,7 @@
             ?>
         </div>
     </section>
+
+    <?php get_template_part('content', 'call-to-action'); ?>
 
 <?php get_footer(); ?>
