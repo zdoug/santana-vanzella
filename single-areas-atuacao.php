@@ -5,9 +5,7 @@
 ?>
     <main class="area-atuacao">
         <div class="container">
-            <div class="col-12">
-                <?php the_post_thumbnail( array( 1300, 282 ) ); ?>
-            </div>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/head_direito_medico.png" class="img-fluid" alt="">
         </div>
         <div class="container">
             <div class="col-5">
@@ -20,16 +18,16 @@
     </main>
     <section class="area-list">
         <div class="container">
-            <div class="col-3 area-list_item">
-                <img src="" alt="">
+            <div class="col-4 area-list_item">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/icon-check.svg" alt="Ícone de Vantagem">
                 <p><?php echo get_post_meta(get_the_ID(), 'beneficio1', true); ?></p>
             </div>
-            <div class="col-3 area-list_item">
-                <img src="" alt="">
+            <div class="col-4 area-list_item">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/icon-check.svg" alt="Ícone de Vantagem">
                 <p><?php echo get_post_meta(get_the_ID(), 'beneficio2', true); ?></p>
             </div>
-            <div class="col-3 area-list_item">
-                <img src="" alt="">
+            <div class="col-4 area-list_item">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/icon-check.svg" alt="Ícone de Vantagem">
                 <p><?php echo get_post_meta(get_the_ID(), 'beneficio3', true); ?></p>
             </div>
         </div>
@@ -37,7 +35,7 @@
     <section class="area-speciality">
         <div class="container">
             <div class="col-5">
-                <img src="" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/foto-especialidades-direito-medico.png" alt="Ícone de Vantagem" class="img-fluid">
             </div>
             <div class="col-7">
                 <h3>Especialidades</h3>

@@ -175,4 +175,82 @@
             }
         }
     }
+
+    .about-main {
+        flex-direction: column-reverse;
+        & .container {
+            flex-direction: column;
+            & h1 {
+                font-size: 3rem;
+                margin: 2.5rem 0 1.8rem;
+            }
+        }
+    }
+    .about-data {
+        & .container {
+            flex-direction: column;
+        }
+        &_col {
+            margin: 3rem 0;
+            & h3 {
+                font-size: 2rem;
+                & strong {
+                    font-size: 5rem;
+                }
+            }
+        }
+    }
+
+    .about-info {
+        padding: 7rem 0;
+        & .container {
+            flex-direction: column;
+            & h3 {
+                font-size: 2.8rem;
+                margin-bottom: 2.25rem;
+            }
+        }
+    }
+
+    .about-fotos {
+        &__slider {
+            & .col-3 {
+                flex: 0 0 33%;
+            }
+        }
+    }
+
+    .area-atuacao {
+        & .container {
+            flex-direction: column;
+            & h1 {
+                font-size: 3rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+    .area-list {
+        & .container {
+            flex-direction: column;
+            row-gap: 2rem;
+        }
+    }
+    .single-areas-atuacao {
+        & .area-speciality {
+            & .container {
+                flex-direction: column;
+                & h3 {
+                    font-size: 2.5rem;
+                    margin: 2rem 0 1rem;
+                }
+                & summary {
+                    font-size: 1.8rem;
+                }
+                & p {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+    
 }

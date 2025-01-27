@@ -18,7 +18,7 @@ body {
 h1 {
     font-size: 4.4rem;
     margin-bottom: 3rem;
-    & a {
+    & a, em {
         font-style: italic;
         color: $secondary-color;
         text-decoration: none;
@@ -305,13 +305,94 @@ body.home {
         }
     }
 }
+.about-main {
+    display: flex;
+    flex-direction: column;
+}
+.about-data {
+    &_col {
+        margin: 6rem 0;
+        text-align: center;
+        padding: 2rem;
+        & h3 {
+            font-size: 2.4rem;
+            font-family: $secondary-font;
+            & strong {
+                font-size: 7rem;
+                color: $secondary-color;
+                display: block;
+                font-family: $primary-font;
+                font-weight: normal;
+            }
+        }
+    }
+}
 
+.about-info {
+    padding: 9rem 0;
+    background: $gray2;
+    & h3 {
+        font-size: 3.5rem;
+        & em {
+            color: $secondary-color;
+        }
+    }
 
-.fotos {
+}
+
+.about-fotos {
+    padding: 9rem 0;
     &__slider {
+        margin-top: 3rem;
         overflow-x: scroll;
     }
 }
+
+.single-areas-atuacao {
+    & main.area-atuacao {
+        & .container {
+            & h1 {
+                color: $secondary-color;
+                font-style: italic;
+            }
+            & img {
+                margin-bottom: 4rem;
+            }
+        }
+    }
+    & .area-list {
+        padding: 8rem 0;
+        &_item {
+            border: 1px solid $gray2;
+            padding: 2.5rem;
+            text-align: center;
+            & img {
+                margin-bottom: 1.75rem;
+            }
+        }
+    }
+    & .area-speciality {
+        background: $gray1;
+        padding: 9rem 0;
+        & h3 {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+        }
+        & details {
+            padding: 1.75rem 0;
+            border-bottom: 2px solid $gray3;
+        }
+        & summary {
+            font-size: 2.25rem;
+            color: $secondary-color;
+            font-family: $primary-font;
+            & + p {
+                margin-top: 1.5rem;
+            }
+        }
+    }
+}
+
 article#post {
     & .container {
         justify-content: center;

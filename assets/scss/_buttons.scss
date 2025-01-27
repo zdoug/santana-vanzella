@@ -17,3 +17,35 @@
         color: $primary-color;
     }    
 }
+
+.link {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    color: $secondary-color;
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    position: relative;
+    &:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background: $secondary-color;
+        transition: all 0.2s ease;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+    &:after {
+        content: "→";
+        display: inline-block;
+        margin-left: 1.4rem;
+    }
+    &:hover {
+        &:before {
+            width: 100%;
+            transition: all 0.2s ease;
+        }
+    }
+}

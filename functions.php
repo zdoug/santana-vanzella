@@ -99,6 +99,7 @@
 
     add_action('cmb2_admin_init', 'cmb2_fields_beneficios');
     add_action('cmb2_admin_init', 'cmb2_fields_especialidades');
+    add_action('cmb2_admin_init', 'cmb2_fields_escritorio');
 
     function cmb2_fields_beneficios() {
         // Adiciona um bloco
@@ -191,6 +192,45 @@
             'type' => 'textarea_small',
         ]);
     
+    }
+
+    function cmb2_fields_escritorio() {
+        // Adiciona um bloco
+        $cmb = new_cmb2_box( array(
+            'id'            => 'test_metabox3',
+            'title'         => __( 'Intro', 'cmb2' ),
+            'object_types'  => array( 'page', ), // Post type
+            'show_on'      => array( 'key' => 'id', 'value' => array( 8 ) ),
+            'context'       => 'normal',
+            'priority'      => 'high',
+            'show_names'    => true, // Show field names on the left
+            // 'cmb_styles' => false, // false to disable the CMB stylesheet
+            // 'closed'     => true, // Keep the metabox closed by default
+        ) );    
+      
+        // Adiciona um campo ao bloco criado
+        $cmb->add_field( array(
+            'name'       => __( 'Título', 'cmb2' ),
+            'desc'       => __( 'Título Introdução', 'cmb2' ),
+            'id'         => 'titulo-escritorio',
+            'type'       => 'textarea_small',
+            'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+            // 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
+            // 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
+            // 'on_front'        => false, // Optionally designate a field to wp-admin only
+            // 'repeatable'      => true,
+        ) );
+        $cmb->add_field( array(
+            'name'       => __( 'Texto', 'cmb2' ),
+            'desc'       => __( 'Texto de Introdução', 'cmb2' ),
+            'id'         => 'texto-escritorio',
+            'type'       => 'textarea_small',
+            'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+            // 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
+            // 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
+            // 'on_front'        => false, // Optionally designate a field to wp-admin only
+            // 'repeatable'      => true,
+        ) );
     }
 
 ?>
