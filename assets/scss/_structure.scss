@@ -169,6 +169,7 @@ body.home {
                             font-family: $primary-font;
                             font-weight: 400;
                             display: block;
+                            line-height: 1;
                         }
                     }
                 }
@@ -461,6 +462,72 @@ body.home {
                 color: $black;
                 &:hover {
                     text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.main-contato {
+    padding: 4rem 0 8rem;
+    & .container {
+        justify-content: space-between;
+        & h1 {
+            font-size: 4.8rem;
+            & strong {
+                font-style: italic;
+                color: $secondary-color;
+            }
+        }
+        & form {
+            margin-top: 4rem;
+            & .form-input {
+                display: flex;
+                flex-direction: column;
+                row-gap: 12px;
+                margin-bottom: 2.4rem;
+                & label, input, select, textarea {
+                    font-size: 1.6rem;
+                }
+                & input[type="text"], input[type="email"], select, textarea {
+                    background: $gray1;
+                    padding: 1rem 2rem;
+                    border: none;
+                }
+                & textarea {
+                    min-height: 100px;
+                    resize: none;
+                }
+            }
+        }
+        & aside {
+            & h3 {
+                font-size: 3.5rem;
+                margin-bottom: 2rem;
+            }
+            & address {
+                margin-top: 2rem;
+                font-size: 2rem;
+                font-style: normal;
+                max-width: 400px;
+            }
+            & hr {
+                border: none;
+                height: 5px;
+                background: $gray1;
+                margin: 3rem 0;
+            }
+            & ul {
+                list-style: none;
+                & li {
+                    font-size: 2rem;
+                    & + li {
+                        margin-top: 1rem;
+                    }
+                    & a {
+                        color: $black;
+                        text-decoration: none;
+                    }
                 }
             }
         }

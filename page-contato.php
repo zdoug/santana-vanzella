@@ -2,7 +2,7 @@
     get_header();
 ?>
 
-<main class="main">
+<main class="main-contato">
     <div class="container">
         <div class="col-5">
             <h1>Entre em <strong>Contato</strong></h1>
@@ -27,17 +27,17 @@
                         <option value="Direito Trabalhista">Direito Trabalhista</option>
                         <option value="Direito Civil">Direito Civil</option>
                     </select>
-                    <div class="form-input">
-                        <label>Mensagem</label>
-                        <textarea name="" id=""></textarea>
-                    </div>
-                    <button type="submit">Enviar</button>
                 </div>
+                <div class="form-input">
+                    <label>Mensagem</label>
+                    <textarea name="" id=""></textarea>
+                </div>
+                <button class="btn btn__primary" type="submit">Enviar</button>
             </form>
         </div>
         <aside class="col-6">
-            <h3>Onde Estamos</h3>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/edificio-torre-di-pietra-londrina-pr.jpg" alt="Edifício Torre di Pietra em Londrina/PR" />
+            <h3>Onde estamos</h3>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/edificio-torre-di-pietra-londrina-pr.jpg" alt="Edifício Torre di Pietra em Londrina/PR" class="img-fluid"/>
             <address>Avenida Ayrton Senna da Silva, 500 Condomínio Torre di Pietra, 15º andar - Londrina/PR</address>
             <a href="" class="link">Clique para visualizar o mapa</a>
             <hr>

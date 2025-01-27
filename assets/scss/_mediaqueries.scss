@@ -285,5 +285,19 @@
             }
         }
     }
+
+    .main-contato {
+        & .container {
+            flex-direction: column;
+            row-gap: 7rem;
+            & h1 {
+                font-size: 3rem;
+                margin-bottom: 1.5rem;
+            }
+            & h2 {
+                font-size: 2.5rem;
+            }
+        }
+    }
     
 }

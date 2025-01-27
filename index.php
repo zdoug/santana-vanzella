@@ -12,7 +12,14 @@
         ?>
             <div class="col-4">
                 <a href="<?php the_permalink(); ?>">
-                    <?php the_post_thumbnail('medium', array('class' => 'img-fluid')); ?>
+                    <?php
+                        if (has_post_thumbnail()) {
+                            the_post_thumbnail('medium', array('class' => 'img-fluid'));
+                        } else { ?>
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/sem-imagem.png" class="img-fluid" alt="">
+                        <?php
+                            }                        
+                        ?>
                 </a>
                 <time datetime="<?php echo $post->post_date; ?>"><?php echo the_date(); ?></time>
                 <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
