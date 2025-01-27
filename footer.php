@@ -27,15 +27,15 @@
                 <div class="footer__links">
                     <h3>WhatsApp / Telefone</h3>
                     <ul>
-                        <li><a href="">(43) 99835-3386</a></li>
-                        <li><a href="">(43) 3341-5663</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=5543998353386" target="_blank" rel="noopener noreffer">(43) 99835-3386</a></li>
+                        <li><a href="tel:+554333415663" rel="noopener noreffer">(43) 3341-5663</a></li>
                     </ul>
                 </div>
                 <div class="footer__links">
                     <h3>Redes Sociais</h3>
                     <ul>
-                        <li><a href="">Instagram</a></li>
-                        <li><a href="">LinkedIn</a></li>
+                        <li><a href="https://www.instagram.com/santanaevanzella/" target="_blank" rel="noopener noreffer">Instagram</a></li>
+                        <!-- <li><a href="">LinkedIn</a></li> -->
                     </ul>
                 </div>
             </div>
@@ -48,6 +48,7 @@
                 </a></p>
             </div>
         </div>
+        <a href="https://api.whatsapp.com/send?phone=5543998353386" target="_blank" class="wp_button" title="Falar no WhatsApp" rel="noopener noreffer"></a>
     </footer>
     <?php wp_footer(); ?>
 </body>

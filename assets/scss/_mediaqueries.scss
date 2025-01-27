@@ -299,5 +299,28 @@
             }
         }
     }
+
+    .page-areas {
+        & .container {
+            & + .container {
+                flex-direction: column;
+                row-gap: 2rem;
+                
+            }
+        }
+        &__area {
+            padding: 2rem;
+            & a {
+                & img {
+                    max-width: 40px;
+                    display: block;
+                    height: auto;
+                }
+                & h3 {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
     
 }

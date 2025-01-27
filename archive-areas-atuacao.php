@@ -2,7 +2,7 @@
     get_header();
 ?>
 
-<section class="home-areas">
+<section class="page-areas">
     <div class="container">
         <div class="col-7">
             <h2>Conheça nossas<br />Áreas de Atuação</h2>
@@ -24,7 +24,7 @@
                 while ( $postlist2->have_posts() ): 
                     $postlist2->the_post();
         ?>
-            <div class="col-4 home-areas__area">
+            <div class="col-4 page-areas__area">
                 <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
                     <div class="icon-area">
                     <?php the_post_thumbnail( 'custom-thumb' ); ?>
