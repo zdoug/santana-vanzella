@@ -253,4 +253,37 @@
         }
     }
     
+    .main-equipe, .equipe {
+        & h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        & .container {
+            flex-direction: column;
+            row-gap: 2rem;
+            & h2 {
+                font-size: 2.5rem;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    .blog {
+        & .container-posts {
+            flex-direction: column;
+            row-gap: 2rem;
+            margin-bottom: 6rem;
+            & h2 {
+                font-size: 2rem;
+            }
+            & a {
+                & img {
+                    max-width: initial;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+    
 }

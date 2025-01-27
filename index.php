@@ -4,7 +4,7 @@
         <h1>Blog</h1>
     </div>
 </section>
-    <div class="container">
+    <div class="container container-posts">
         <?php
             global $post;
             if ( have_posts() ):

@@ -386,6 +386,76 @@ body.home .home-areas__area a h3 {
   margin-top: 1.5rem;
 }
 
+.main-equipe {
+  padding: 3rem 0 8rem;
+}
+.main-equipe h1 {
+  font-size: 3.5rem;
+}
+
+.equipe {
+  margin-bottom: 8rem;
+}
+.equipe h2 {
+  font-size: 3rem;
+  margin-bottom: 4rem;
+}
+.equipe__pessoa {
+  background: #F5F5F5;
+  padding: 3rem;
+}
+.equipe__pessoa h3 {
+  font-size: 2rem;
+  color: #B49564;
+  margin-bottom: 1.5rem;
+}
+.equipe__pessoa small {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+  display: block;
+}
+.equipe__pessoa ul {
+  list-style-position: inside;
+  margin-bottom: 1.25rem;
+}
+.equipe__pessoa ul li {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin-bottom: 0.25rem;
+}
+.equipe__pessoa__social-link {
+  color: #B49564;
+  font-size: 1.5rem;
+  display: inline-block;
+  text-decoration: none;
+}
+.equipe__pessoa__social-link + .equipe__pessoa__social-link {
+  margin-left: 1.25rem;
+}
+.equipe__pessoa__social-link:after {
+  content: "↗";
+  margin-left: 0.5rem;
+}
+
+.blog .container-posts time {
+  display: block;
+  font-size: 1.5rem;
+  margin: 2.5rem 0 1.25rem;
+  color: #B49564;
+}
+.blog .container-posts h2 {
+  font-size: 2.4rem;
+  font-family: "Roboto", sans-serif;
+}
+.blog .container-posts h2 a {
+  text-decoration: none;
+  color: #131313;
+}
+.blog .container-posts h2 a:hover {
+  text-decoration: underline;
+}
+
 article#post .container {
   justify-content: center;
 }
@@ -714,5 +784,30 @@ article#post .container .content-post p a {
   }
   .single-areas-atuacao .area-speciality .container p {
     font-size: 1.6rem;
+  }
+  .main-equipe h1, .equipe h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  .main-equipe .container, .equipe .container {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+  .main-equipe .container h2, .equipe .container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  .blog .container-posts {
+    flex-direction: column;
+    row-gap: 2rem;
+    margin-bottom: 6rem;
+  }
+  .blog .container-posts h2 {
+    font-size: 2rem;
+  }
+  .blog .container-posts a img {
+    max-width: initial;
+    width: 100%;
+    height: auto;
   }
 }
